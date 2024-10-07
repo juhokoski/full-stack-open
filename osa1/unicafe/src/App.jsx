@@ -1,15 +1,9 @@
 import { useState } from 'react'
 
-// 1.11 Valmis
-// TODO: Tee pyöristykset average ja positives komponenteille
-
-
-
 const handleClick = () => {
   console.log('clicked')
 
 }
-
 
 const Statistics =(props) => {
   console.log(props)
@@ -35,7 +29,6 @@ const Statistics =(props) => {
     ) 
 }
 
-
 const StatisticLine = (props) => {
   return (
     <tr>
@@ -46,7 +39,6 @@ const StatisticLine = (props) => {
   )
 }
 
-
 const Button = (props) => {
   return (
     <div>
@@ -54,7 +46,6 @@ const Button = (props) => {
     </div>
   )
 }
-
 
 const App = () => {
   const [ good, setGood] = useState(0)
@@ -76,7 +67,7 @@ const App = () => {
         <Button handleClick={increaseGood} text="good" />
         <Button handleClick={increaseNeutral} text="neutral" />
         <Button handleClick={increaseBad} text="bad" />
-        <h2>Statistics</h2>
+        <h1>statistics</h1>
         <Statistics good={good} neutral={neutral} bad={bad} total={total} average={average} positives={positives} />
         
     </div>
